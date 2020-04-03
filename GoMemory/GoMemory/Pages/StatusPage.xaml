@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="GoMemory.Pages.StatusPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android, UWP">0,10,0,0</On>
+            <On Platform="iOS">0,30,0,0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Margin="25,10,25,0" BackgroundColor="Goldenrod">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Your Stats"
+                    TextColor="White" />
+            </Frame>
+            <Grid Margin="10,5,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Style="{StaticResource LargeBlueTextLabel}"
+                    Text="Difficulty" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Style="{StaticResource LargeBlueTextLabel}"
+                    Text="Completed Levels" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Style="{StaticResource BaseLabel}"
+                    Text="Easy"
+                    VerticalOptions="Start" />
+                <Label
+                    x:Name="EasyLabel"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Style="{StaticResource BaseLabel}"
+                    Text="0"
+                    VerticalOptions="Start" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Style="{StaticResource BaseLabel}"
+                    Text="Normal"
+                    VerticalOptions="Start" />
+                <Label
+                    x:Name="NormalLabel"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Style="{StaticResource BaseLabel}"
+                    Text="0"
+                    VerticalOptions="Start" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Style="{StaticResource BaseLabel}"
+                    Text="Hard"
+                    VerticalOptions="Start" />
+                <Label
+                    x:Name="HardLabel"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Style="{StaticResource BaseLabel}"
+                    Text="0"
+                    VerticalOptions="Start" />
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

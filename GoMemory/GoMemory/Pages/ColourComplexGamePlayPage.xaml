@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="GoMemory.Pages.ColourComplexGamePlayPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:GoMemory.Helpers;assembly=GoMemory"
+    Title="{Binding Title}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android, UWP">0,10,0,0</On>
+            <On Platform="iOS">0,30,0,0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <!--  Sequence Layout  -->
+            <StackLayout x:Name="StackLayout" IsVisible="True">
+                <StackLayout x:Name="StartStackLayout" Orientation="Horizontal">
+                    <Label x:Name="LevelLabel" Style="{StaticResource LargeBlueTextLabel}" />
+                    <Button
+                        x:Name="StartButton"
+                        Clicked="StartButton_OnClicked"
+                        Style="{StaticResource GreenButton}"
+                        Text="Go !" />
+                </StackLayout>
+                <Label Style="{StaticResource LargeDarkBlueTextLabel}" Text="Your Sequence" />
+                <BoxView
+                    BackgroundColor="Black"
+                    HeightRequest="2"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="250" />
+
+                <ScrollView x:Name="SequenceScrollView" HorizontalOptions="Center">
+                    <StackLayout x:Name="SequenceStackLayout" HorizontalOptions="Center" />
+                </ScrollView>
+
+            </StackLayout>
+
+
+            <StackLayout x:Name="Failed" IsVisible="False">
+
+                <Image Source="{helpers:ImageResource GoMemory.Images.gameover.png}" />
+
+                <Button
+                    Clicked="RetryButton_Clicked"
+                    Style="{StaticResource GreenButton}"
+                    Text="Retry" />
+            </StackLayout>
+            <Image
+                x:Name="Complete"
+                IsVisible="False"
+                Source="{helpers:ImageResource GoMemory.Images.complete.png}" />
+
+            <!--  Selection Layout  -->
+            <StackLayout x:Name="PlayLayout" IsVisible="False">
+                <Label Style="{StaticResource LargeBlueTextLabel}" Text="Your Guesses" />
+                <Frame x:Name="Frame" BorderColor="Black">
+                    <StackLayout
+                        x:Name="SelectedStackLayout"
+                        Margin="0"
+                        Padding="2"
+                        Orientation="Horizontal" />
+                </Frame>
+                <Frame BackgroundColor="DarkOrange">
+                    <Label
+                        x:Name="ModeLabel"
+                        Style="{StaticResource LargeBlueTextLabel}"
+                        TextColor="White" />
+                </Frame>
+
+                <Grid x:Name="Grid" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

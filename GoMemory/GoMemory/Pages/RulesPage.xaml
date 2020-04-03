@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="GoMemory.Pages.RulesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:GoMemory.Helpers;assembly=GoMemory"
+    Title="{Binding Title}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android, UWP">0,10,0,0</On>
+            <On Platform="iOS">0,30,0,0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout x:Name="WhatYouSee" IsVisible="False">
+                <Frame Margin="10,0,10,0" BackgroundColor="Goldenrod">
+                    <Label
+                        Style="{StaticResource LargeBlueTextLabel}"
+                        Text="How To Play"
+                        TextColor="White" />
+                </Frame>
+
+                <Label
+                    Margin="10,10,10,0"
+                    FontSize="Small"
+                    Text="You will be presented with a selection of  images to memorize"
+                    TextColor="Black" />
+                <Image
+                    Margin="5"
+                    HeightRequest="120"
+                    Source="{helpers:ImageResource GoMemory.Images.whatyousseememorize.PNG}" />
+                <Label
+                    Margin="10,10,10,0"
+                    FontSize="Small"
+                    Text="When your ready press GO!"
+                    TextColor="Black" />
+                <Label
+                    Margin="10,10,10,0"
+                    FontSize="Small"
+                    Text="Select the Images you recall  from the grid presented"
+                    TextColor="Black" />
+                <Image
+                    Margin="5"
+                    HeightRequest="120"
+                    Source="{helpers:ImageResource GoMemory.Images.whatyousseeguess.png}" />
+            </StackLayout>
+
+            <StackLayout x:Name="Sequential" IsVisible="False">
+                <Frame Margin="10,0,10,0" BackgroundColor="Goldenrod">
+                    <Label
+                        Style="{StaticResource LargeBlueTextLabel}"
+                        Text="How To Play"
+                        TextColor="White" />
+                </Frame>
+
+                <Label
+                    Margin="10,10,10,0"
+                    FontSize="Small"
+                    Text="You will be presented with a selection of  images to memorize"
+                    TextColor="Black" />
+                <Image
+                    Margin="5"
+                    HeightRequest="120"
+                    Source="{helpers:ImageResource GoMemory.Images.sequentialrecall.PNG}" />
+                <Label
+                    Margin="10,10,10,0"
+                    FontSize="Small"
+                    Text="When your ready press GO!"
+                    TextColor="Black" />
+                <Label
+                    Margin="10,10,10,0"
+                    FontSize="Small"
+                    Text="Select the Images you recall  from the grid presented"
+                    TextColor="Black" />
+                <Label
+                    Margin="10,10,10,0"
+                    FontSize="Small"
+                    Text="BUT they must be selected in the correct order"
+                    TextColor="Black" />
+                <Image
+                    Margin="5"
+                    HeightRequest="120"
+                    Source="{helpers:ImageResource GoMemory.Images.sequentialGuess.PNG}" />
+            </StackLayout>
+            
+
+            <StackLayout x:Name="ColourComplex" IsVisible="False">
+                <Frame Margin="10,0,10,0" BackgroundColor="Goldenrod">
+                    <Label
+                        Style="{StaticResource LargeBlueTextLabel}"
+                        Text="How To Play"
+                        TextColor="White" />
+                </Frame>
+
+                <Label
+                    Margin="10,2,10,0"
+                    FontSize="Small"
+                    Text="You will be presented with a selection colored  text. Your need to memorize the word and the colouring of the text"
+                    TextColor="Black" />
+                <Image
+                   
+                    HeightRequest="80"
+                    Source="{helpers:ImageResource GoMemory.Images.colourcomplexmemorize.PNG}" />
+                <Label
+                    Margin="10,2,10,0"
+                    FontSize="Small"
+                    Text="When your ready press GO!"
+                    TextColor="Black" />
+                <Label
+                    Margin="10,5,10,0"
+                    FontSize="Small"
+                    Text="Select the what you recall for the selctions present, BUT they must be selected in the correct order"
+                    TextColor="Black" />
+              
+                <Image
+                    HeightRequest="100"
+                    Source="{helpers:ImageResource GoMemory.Images.selectionrecallcolour.PNG}" /> 
+                
+                <Label
+                    Margin="10,2,10,0"
+                    FontSize="Small"
+                    Text="Becareful to check the mode box "
+                    TextColor="Black" />
+                <Label
+                    Margin="10,5,10,0"
+                    FontSize="Small"
+                    Text="Mode: How its spelt ? - Recall the color from the word"
+                    TextColor="Black" />
+                <Label
+                    Margin="10,5,10,0"
+                    FontSize="Small"
+                    Text="Mode: How was it colored ? - Recall the color the text was in"
+                    TextColor="Black" />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

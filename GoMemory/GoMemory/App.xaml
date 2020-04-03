@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="GoMemory.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="Goldenrod" />
+            </Style>
+
+            <!--  StackLayout  -->
+            <Style TargetType="StackLayout">
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <!--  Grid  -->
+            <Style TargetType="Grid">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="ColumnSpacing" Value="1" />
+                <Setter Property="RowSpacing" Value="1" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+            </Style>
+
+            <!--  Buttons  -->
+            <Style x:Key="BaseButton" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="Goldenrod" />
+                <Setter Property="CornerRadius" Value="3" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+
+            <Style
+                x:Key="GoldenRodButton"
+                BasedOn="{StaticResource BaseButton}"
+                TargetType="Button">
+                <Setter Property="WidthRequest" Value="400" />
+            </Style>
+
+            <Style
+                x:Key="GoldenRodSmallButton"
+                BasedOn="{StaticResource BaseButton}"
+                TargetType="Button">
+
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="WidthRequest" Value="100" />
+            </Style>
+
+            <Style
+                x:Key="GreenButton"
+                BasedOn="{StaticResource BaseButton}"
+                TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Green" />
+                <Setter Property="WidthRequest" Value="100" />
+            </Style>
+
+
+            <!--  Labels  -->
+            <Style x:Key="BaseLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+
+            <Style
+                x:Key="LargeBlueTextLabel"
+                BasedOn="{StaticResource BaseLabel}"
+                TargetType="Label">
+                <Setter Property="TextColor" Value="MidnightBlue" />
+                <Setter Property="Margin" Value="0,0,5,0" />
+            </Style>
+
+            <Style
+                x:Key="LargeDarkBlueTextLabel"
+                BasedOn="{StaticResource BaseLabel}"
+                TargetType="Label">
+                <Setter Property="TextColor" Value="DarkSlateBlue" />
+                <Setter Property="Margin" Value="0,0,5,0" />
+            </Style>
+
+
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+
+
+</Application>

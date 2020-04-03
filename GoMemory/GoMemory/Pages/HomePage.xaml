@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="GoMemory.Pages.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:GoMemory.Helpers;assembly=GoMemory"
+    Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Image
+                x:Name="ImageLogo"
+                Margin="10"
+                HeightRequest="150"
+                Source="{helpers:ImageResource GoMemory.Images.thinking.png}" />
+
+
+            <Label Style="{StaticResource BaseLabel}" Text="Games" />
+            <Button
+                Clicked="Button_OnClicked"
+                Style="{StaticResource GoldenRodButton}"
+                Text="What you see" />
+            <Button
+                Clicked="Button_OnClicked"
+                Style="{StaticResource GoldenRodButton}"
+                Text="Sequential" />
+
+            <Label
+                Margin="0,20,0,0"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                HorizontalOptions="Center"
+                Text="Advanced Play" />
+            <Button
+                Clicked="Button_OnClicked"
+                Style="{StaticResource GoldenRodButton}"
+                Text="Colour Complex" />
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

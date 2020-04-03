@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\colourcomplexmemorize.PNG" />
+    <None Remove="Images\complete.png" />
+    <None Remove="Images\gameover.png" />
+    <None Remove="Images\selectionrecallcolour.PNG" />
+    <None Remove="Images\sequentialGuess.PNG" />
+    <None Remove="Images\sequentialrecall.PNG" />
+    <None Remove="Images\whatyousseeguess.PNG" />
+    <None Remove="Images\whatyousseememorize.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\colourcomplexmemorize.PNG" />
+    <EmbeddedResource Include="Images\complete.png" />
+    <EmbeddedResource Include="Images\gameover.png" />
+    <EmbeddedResource Include="Images\selectionrecallcolour.PNG" />
+    <EmbeddedResource Include="Images\sequentialGuess.PNG" />
+    <EmbeddedResource Include="Images\sequentialrecall.PNG" />
+    <EmbeddedResource Include="Images\thinking.png" />
+    <EmbeddedResource Include="Images\whatyousseeguess.png" />
+    <EmbeddedResource Include="Images\whatyousseememorize.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\StatusPage.xaml.cs">
+      <DependentUpon>StatusPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\ColourComplexGamePlayPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\RulesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\SequentialGamePlayPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\StatusPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\WhatYouSeeGamePlayPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

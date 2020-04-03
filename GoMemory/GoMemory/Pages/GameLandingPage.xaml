@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="GoMemory.Pages.GameLandingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="New Game" />
+            <Frame
+                Margin="10,0,10,20"
+                Padding="5"
+                BorderColor="Goldenrod">
+
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+
+                    <Button
+                        Clicked="SetGame_OnClicked"
+                        Style="{StaticResource GoldenRodSmallButton}"
+                        Text="Easy" />
+                    <Button
+                        Clicked="SetGame_OnClicked"
+                        Style="{StaticResource GoldenRodSmallButton}"
+                        Text="Normal" />
+                    <Button
+                        Clicked="SetGame_OnClicked"
+                        Style="{StaticResource GoldenRodSmallButton}"
+                        Text="Hard" />
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Margin="10,20,10,0"
+                Padding="5"
+                BorderColor="Goldenrod">
+                <StackLayout>
+                    <Button
+                        x:Name="ResumeBtn"
+                        Clicked="ResumeBtn_OnClicked"
+                        IsEnabled="False"
+                        Style="{StaticResource GoldenRodButton}"
+                        Text="Resume" />
+                    <Button
+                        x:Name="StatusBtn"
+                        Clicked="StatusBtn_OnClicked"
+                        Style="{StaticResource GoldenRodButton}"
+                        Text="Stats" />
+                    <Button
+                        x:Name="RulesBtn"
+                        Clicked="RulesBtn_OnClicked"
+                        Style="{StaticResource GoldenRodButton}"
+                        Text="Rules" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
