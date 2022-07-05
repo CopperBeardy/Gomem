@@ -1,1 +1,1 @@
-Gomem
+basic memory game app
